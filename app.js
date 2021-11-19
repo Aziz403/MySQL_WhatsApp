@@ -1,17 +1,7 @@
-//const http = require('http');
 const { Client } = require('whatsapp-web.js');
 const client = new Client();
 const qrcode = require('qrcode-terminal');
 const mysql = require('mysql')
-
-
-/*
-const requestListener = function (req, res) {
-  res.writeHead(200);
-  res.end('Hello, World!');
-}
-*/
-//const server = http.createServer(requestListener);
 
 const db = mysql.createConnection({
   user:'root',
@@ -62,5 +52,3 @@ client.on('message', message => {
 
 client.initialize();
 
-
-//server.listen(8080,()=>{console.log('listen')});
